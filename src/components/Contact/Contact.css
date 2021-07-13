@@ -1,0 +1,126 @@
+
+
+
+
+.column{
+   flex: 0 0 42%; 
+}
+
+.card{
+    position: relative;
+    min-height: 100%;
+    padding: 50px;
+    padding-right: 20px;
+
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+.card .card_bg{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255,255,255,0.25);
+    border-left-color: rgba(255,255,255,0.1);
+    border-right-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    backdrop-filter:blur(20px);
+    background: linear-gradient(to right top, rgba(255, 255, 255, 0.973) 50%, rgba(255, 255, 255, 0.692) 50%);
+}
+
+.card .pic{
+    transition: all 0.8s ease-out;
+    transform: rotateY(0deg) translateZ(100px);
+    transform-origin: left;
+    transform-style: preserve-3d;
+    pointer-events: none;
+}
+
+.card .pic img {
+    max-width: 90%;
+    vertical-align: top;
+
+}
+
+.card .description{
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 50px;
+  text-align: center;
+  color: black;
+  text-shadow: 0 0 10px rgb(0,0,0,0.2);
+  letter-spacing: 1px;
+  line-height: 1.6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  transition: all 0.8s ease-out;
+  transform: rotateY(180deg) translateZ(200px);
+  transform-origin: center;
+  pointer-events: none;
+}
+
+.card .description > * {
+    width: 90%;
+}
+
+.op{
+    color: black;
+}
+.rang{
+    color: black;
+}
+.sariq{
+    color: gold;
+}
+
+.card .description h3{
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.card .description h4{
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.card .description ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.card .description ul li{
+    display: inline-block;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.card .description ul li a{
+    color: black;
+    transition: all 0.5s ease-out;
+}
+
+.card .description ul li a:hover{
+    color: rgb(81, 117, 236);
+}
+
+.card:hover .pic {
+    transform: rotateY(-180deg) translateZ(200px);
+    transform-origin: center;
+}
+
+.card:hover .description {
+    transform: rotateY(0deg) translateZ(100px);
+    transform-origin: right;
+    pointer-events: auto;
+}
+

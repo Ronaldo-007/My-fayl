@@ -1,0 +1,29 @@
+h1{
+  font-size: 40px;  
+  color: white;
+}
+
+p{
+    font-size: 16px;
+    color: white;
+}
+
+h3{
+    color: white;
+    font-size: 24px;
+}
+
+.col-6{
+    
+    text-align: center;
+}
+
+.gggg {
+    border: 15px solid rgb(47, 101, 105);
+}
+
+.odam{
+    font-size: 30px;
+    color: deepskyblue;
+}
+
